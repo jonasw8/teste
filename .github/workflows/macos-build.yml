@@ -1,4 +1,4 @@
-name: Build Xbox Controller Driver (Intel)
+name: Build Xbox Controller Driver (Universal/Intel)
 
 on:
   push:
@@ -8,18 +8,17 @@ on:
 
 jobs:
   build:
-    name: Build on macOS Intel
-    runs-on: macos-13
+    name: Build on macOS Silicon (Targeting Intel)
+    runs-on: macos-latest
 
     steps:
       - name: Checkout do Código
         uses: actions/checkout@v4
-        
-      - name: Selecionar Xcode 15.2 (Último para Intel)
-        run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
 
-      - name: Compilar Driver e App (Sem Assinatura)
+      - name: Selecionar Xcode 16 (Padrão nas imagens recentes)
+        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
+      - name: Compilar Forçando Arquitetura Intel (x86_64)
         run: |
           xcodebuild clean build \
             -project XboxControllerApp.xcodeproj \
@@ -27,4 +26,6 @@ jobs:
             -destination 'platform=macOS,arch=x86_64' \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO \
+            ARCHS=x86_64 \
+            ONLY_ACTIVE_ARCH=NO
