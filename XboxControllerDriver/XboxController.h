@@ -25,7 +25,7 @@ struct XboxControllerState {
     uint8_t leftTrigger, rightTrigger;
 };
 
-class LOCALONLY XboxController : public IOUserHIDDevice
+class XboxController : public IOUserHIDDevice
 {
 public:
     virtual bool init() override;
