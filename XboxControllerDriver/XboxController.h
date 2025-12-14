@@ -8,14 +8,10 @@
 #ifndef XboxController_h
 #define XboxController_h
 
-#include <DriverKit/IOService.iig>
-#include <DriverKit/IOLib.h>
-#include <USBDriverKit/IOUSBHostDevice.iig>
-#include <USBDriverKit/IOUSBHostInterface.iig>
-#include <USBDriverKit/IOUSBHostPipe.iig>
-#include <HIDDriverKit/IOUserHIDDevice.iig>
-#include <DriverKit/IOBufferMemoryDescriptor.iig>
-#include <DriverKit/OSCollections.iig>
+#include <DriverKit/DriverKit.h>
+#include <USBDriverKit/USBDriverKit.h>
+#include <HIDDriverKit/HIDDriverKit.h>
+#include <DriverKit/IOBufferMemoryDescriptor.h>
 
 // Estrutura de estado do controle Xbox 360
 struct XboxControllerState {
