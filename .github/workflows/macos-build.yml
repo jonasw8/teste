@@ -18,7 +18,7 @@ jobs:
       - name: Selecionar Xcode 16 (Padrão nas imagens recentes)
         run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
-      - name: Compilar Forçando Arquitetura Intel e Versão Compatível
+      - name: Compilar Driver e App
         run: |
           xcodebuild clean build \
             -project XboxControllerApp.xcodeproj \
