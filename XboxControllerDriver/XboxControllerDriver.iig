@@ -1,0 +1,3 @@
+class XboxController : IOUserHIDDevice {
+    HandleReadComplete(OSAction*, IOReturn, uint32_t);
+};
