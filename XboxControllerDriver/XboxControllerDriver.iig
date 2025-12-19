@@ -1,3 +1,7 @@
-class XboxController : IOUserHIDDevice {
-    HandleReadComplete(OSAction*, IOReturn, uint32_t);
+#include <HIDDriverKit/IOHIDDevice.iig>
+
+class XboxController : public IOHIDDevice
+{
+    Start(IOService* provider);
+    Stop(IOService* provider);
 };
