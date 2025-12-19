@@ -1,45 +1,48 @@
 #include "XboxController.h"
+#include <HIDDriverKit/IOHIDUsageTables.h>
 #include <os/log.h>
 
 #define Log(fmt, ...) os_log(OS_LOG_DEFAULT, "XboxController: " fmt, ##__VA_ARGS__)
 
-bool XboxController::init() {
-    return IOUserHIDDevice::init();
+bool XboxController::init()
+{
+    Log("init()");
+    if (!IOHIDDevice::init())
+        return false;
+
+    // Cria buffer para 16 botões (2 bytes)
+    IOBufferMemoryDescriptor::Create(
+        kIOMemoryDirectionOut,
+        sizeof(uint16_t),
+        0,
+        &reportBuffer
+    );
+
+    return true;
 }
 
-kern_return_t XboxController::Start(IOService* provider) {
-    Log("Start");
+kern_return_t XboxController::Start(IOService *provider)
+{
+    Log("Start()");
+    auto ret = IOHIDDevice::Start(provider);
 
-    if (!IOUserHIDDevice::Start(provider))
-        return kIOReturnError;
-
-    usbInterface = OSDynamicCast(IOUSBHostInterface, provider);
-    if (!usbInterface)
-        return kIOReturnNoDevice;
-
-    usbInterface->retain();
-    usbInterface->Open(this, 0, 0);
-
-    SetupUSB();
-    SendInitCommand();
-    StartReading();
+    if (ret != kIOReturnSuccess)
+        return ret;
 
     RegisterService();
+
     return kIOReturnSuccess;
 }
 
-kern_return_t XboxController::Stop(IOService* provider) {
-    if (inputPipe) inputPipe->Abort();
-    if (usbInterface) usbInterface->Close(this, 0);
-    return IOUserHIDDevice::Stop(provider);
+kern_return_t XboxController::Stop(IOService *provider)
+{
+    Log("Stop()");
+    return IOHIDDevice::Stop(provider);
 }
 
-void XboxController::free() {
-    OSSafeReleaseNULL(inputPipe);
-    OSSafeReleaseNULL(outputPipe);
-    OSSafeReleaseNULL(usbInterface);
-    OSSafeReleaseNULL(inputBuffer);
-    OSSafeReleaseNULL(hidBuffer);
-    OSSafeReleaseNULL(readAction);
-    IOUserHIDDevice::free();
+void XboxController::free()
+{
+    Log("free()");
+    OSSafeReleaseNULL(reportBuffer);
+    IOHIDDevice::free();
 }
