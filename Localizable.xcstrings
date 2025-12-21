@@ -1,0 +1,102 @@
+{
+  "sourceLanguage" : "pt-BR",
+  "strings" : {
+    "%lld%%" : {
+
+    },
+    "⚠️ Aprovação necessária! Vá em Ajustes do Sistema > Privacidade." : {
+
+    },
+    "⚠️ Reinicie o Mac para finalizar." : {
+
+    },
+    "✅ Driver instalado e ativo!" : {
+
+    },
+    "❌ Erro: %@" : {
+
+    },
+    "About Xbox Controller Driver" : {
+
+    },
+    "Aguardando ação do usuário..." : {
+
+    },
+    "Atualizando driver existente..." : {
+
+    },
+    "Conecte o Receiver USB e ligue o controle" : {
+
+    },
+    "Controle conectado: %@" : {
+
+    },
+    "Controle desconectado" : {
+
+    },
+    "Controles Detectados" : {
+
+    },
+    "Desconhecido" : {
+
+    },
+    "Desinstalar" : {
+
+    },
+    "Gerenciador de Extensão" : {
+
+    },
+    "Instalar Driver" : {
+
+    },
+    "L" : {
+
+    },
+    "Nenhum controle detectado." : {
+
+    },
+    "Parar" : {
+
+    },
+    "R" : {
+
+    },
+    "Resultado desconhecido." : {
+
+    },
+    "Solicitando instalação do driver..." : {
+
+    },
+    "Solicitando remoção do driver..." : {
+
+    },
+    "Testar" : {
+
+    },
+    "v1.0.0 - DriverKit Ad-Hoc Build" : {
+
+    },
+    "Vibração" : {
+
+    },
+    "Xbox 360" : {
+
+    },
+    "Xbox 360 Wireless Receiver Driver\nDriverKit Implementation" : {
+      "comment" : "Credits"
+    },
+    "Xbox Controller" : {
+
+    },
+    "Xbox One" : {
+
+    },
+    "Xbox Series X|S" : {
+
+    },
+    "Xbox Wireless Driver" : {
+
+    }
+  },
+  "version" : "1.1"
+}

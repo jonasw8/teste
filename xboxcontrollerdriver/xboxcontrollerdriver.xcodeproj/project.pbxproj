@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDBDE7DA2EF769BA00B20291 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDBDE7D42EF768FF00B20291 /* DriverKit.framework */; };
+		DDBDE7DB2EF769BA00B20291 /* DriverKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDBDE7D42EF768FF00B20291 /* DriverKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DDBDE7DD2EF769BB00B20291 /* HIDDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDBDE7D82EF7690D00B20291 /* HIDDriverKit.framework */; };
+		DDBDE7DE2EF769BB00B20291 /* HIDDriverKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDBDE7D82EF7690D00B20291 /* HIDDriverKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DDBDE7DF2EF769BD00B20291 /* USBDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDBDE7D62EF7690800B20291 /* USBDriverKit.framework */; };
+		DDBDE7E02EF769BD00B20291 /* USBDriverKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDBDE7D62EF7690800B20291 /* USBDriverKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DDBDE7DC2EF769BA00B20291 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DDBDE7DB2EF769BA00B20291 /* DriverKit.framework in Embed Frameworks */,
+				DDBDE7E02EF769BD00B20291 /* USBDriverKit.framework in Embed Frameworks */,
+				DDBDE7DE2EF769BB00B20291 /* HIDDriverKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DDBDE7BB2EF768A300B20291 /* com.jonasw8.XboxControllerApp.driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = com.jonasw8.XboxControllerApp.driver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDBDE7D42EF768FF00B20291 /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = System/DriverKit/System/Library/Frameworks/DriverKit.framework; sourceTree = SDKROOT; };
+		DDBDE7D62EF7690800B20291 /* USBDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USBDriverKit.framework; path = System/DriverKit/System/Library/Frameworks/USBDriverKit.framework; sourceTree = SDKROOT; };
+		DDBDE7D82EF7690D00B20291 /* HIDDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HIDDriverKit.framework; path = System/DriverKit/System/Library/Frameworks/HIDDriverKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DDBDE7E92EF76C6900B20291 /* Exceptions for "xboxcontrollerdriver" folder in "xboxcontrollerdriver" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DDBDE7BA2EF768A300B20291 /* xboxcontrollerdriver */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DDBDE7C02EF768A300B20291 /* xboxcontrollerdriver */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DDBDE7E92EF76C6900B20291 /* Exceptions for "xboxcontrollerdriver" folder in "xboxcontrollerdriver" target */,
+			);
+			path = xboxcontrollerdriver;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDBDE7B82EF768A300B20291 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDBDE7DA2EF769BA00B20291 /* DriverKit.framework in Frameworks */,
+				DDBDE7DF2EF769BD00B20291 /* USBDriverKit.framework in Frameworks */,
+				DDBDE7DD2EF769BB00B20291 /* HIDDriverKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDBDE7B12EF768A300B20291 = {
+			isa = PBXGroup;
+			children = (
+				DDBDE7C02EF768A300B20291 /* xboxcontrollerdriver */,
+				DDBDE7BD2EF768A300B20291 /* Frameworks */,
+				DDBDE7BC2EF768A300B20291 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDBDE7BC2EF768A300B20291 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDBDE7BB2EF768A300B20291 /* com.jonasw8.XboxControllerApp.driver.dext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDBDE7BD2EF768A300B20291 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDBDE7D82EF7690D00B20291 /* HIDDriverKit.framework */,
+				DDBDE7D62EF7690800B20291 /* USBDriverKit.framework */,
+				DDBDE7D42EF768FF00B20291 /* DriverKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DDBDE7B62EF768A300B20291 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DDBDE7BA2EF768A300B20291 /* xboxcontrollerdriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDBDE7C72EF768A300B20291 /* Build configuration list for PBXNativeTarget "xboxcontrollerdriver" */;
+			buildPhases = (
+				DDBDE7B62EF768A300B20291 /* Headers */,
+				DDBDE7B72EF768A300B20291 /* Sources */,
+				DDBDE7B82EF768A300B20291 /* Frameworks */,
+				DDBDE7B92EF768A300B20291 /* Resources */,
+				DDBDE7DC2EF769BA00B20291 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DDBDE7C02EF768A300B20291 /* xboxcontrollerdriver */,
+			);
+			name = xboxcontrollerdriver;
+			packageProductDependencies = (
+			);
+			productName = xboxcontrollerdriver;
+			productReference = DDBDE7BB2EF768A300B20291 /* com.jonasw8.XboxControllerApp.driver.dext */;
+			productType = "com.apple.product-type.driver-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDBDE7B22EF768A300B20291 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					DDBDE7BA2EF768A300B20291 = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+				};
+			};
+			buildConfigurationList = DDBDE7B52EF768A300B20291 /* Build configuration list for PBXProject "xboxcontrollerdriver" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDBDE7B12EF768A300B20291;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DDBDE7BC2EF768A300B20291 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDBDE7BA2EF768A300B20291 /* xboxcontrollerdriver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDBDE7B92EF768A300B20291 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDBDE7B72EF768A300B20291 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DDBDE7C82EF768A300B20291 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T395SRU2FB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = xboxcontrollerdriver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Xbox Wireless Driver";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Jonas Wander - 2025";
+				INFOPLIST_KEY_OSBundleUsageDescription = "Xbox 360 Wireless Receiver Driver For macOS";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonasw8.XboxControllerApp.driver;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		DDBDE7C92EF768A300B20291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T395SRU2FB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = xboxcontrollerdriver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Xbox Wireless Driver";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Jonas Wander - 2025";
+				INFOPLIST_KEY_OSBundleUsageDescription = "Xbox 360 Wireless Receiver Driver For macOS";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonasw8.XboxControllerApp.driver;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		DDBDE7CA2EF768A300B20291 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DRIVERKIT_DEPLOYMENT_TARGET = 23.6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = driverkit;
+			};
+			name = Debug;
+		};
+		DDBDE7CB2EF768A300B20291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DRIVERKIT_DEPLOYMENT_TARGET = 23.6;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = driverkit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDBDE7B52EF768A300B20291 /* Build configuration list for PBXProject "xboxcontrollerdriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDBDE7CA2EF768A300B20291 /* Debug */,
+				DDBDE7CB2EF768A300B20291 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDBDE7C72EF768A300B20291 /* Build configuration list for PBXNativeTarget "xboxcontrollerdriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDBDE7C82EF768A300B20291 /* Debug */,
+				DDBDE7C92EF768A300B20291 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDBDE7B22EF768A300B20291 /* Project object */;
+}

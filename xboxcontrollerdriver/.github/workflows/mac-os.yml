@@ -1,0 +1,39 @@
+name: Build macOS App
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Compilar com xcodebuild
+        run: |
+          xcodebuild clean build \
+            -project "xboxcontrollerdriver.xcodeproj" \
+            -scheme "xboxcontrollerdriver" \
+            -destination "generic/platform=DriverKit" \
+            -configuration Debug \
+            -derivedDataPath build \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            ONLY_ACTIVE_ARCH=NO \
+            ARCHS="x86_64 arm64"
+
+      - name: Zipar o Driver
+        run: |
+          cd build/Build/Products/Debug-driverkit/
+          zip -r xboxcontrollerdriver.zip *.dext
+
+      - name: Upload do Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-driver-build
+          path: build/Build/Products/Debug-driverkit/xboxcontrollerdriver.zip
