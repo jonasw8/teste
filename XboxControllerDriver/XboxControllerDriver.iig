@@ -1,7 +1,0 @@
-#include <HIDDriverKit/IOHIDDevice.iig>
-
-class XboxController : public IOHIDDevice
-{
-    Start(IOService* provider);
-    Stop(IOService* provider);
-};
