@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DD041F312EEE475E00AE19C3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DD041F302EEE475E00AE19C3 /* Localizable.xcstrings */; };
-		DD041F382EEE4B8F00AE19C3 /* ControllerVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD041F372EEE4B8F00AE19C3 /* ControllerVisualizer.swift */; };
-		DD6F52E02EF78E0E00B3BAF9 /* com.jonasw8.XboxControllerApp.driver.dext in CopyFiles */ = {isa = PBXBuildFile; fileRef = DD6F52DC2EF78D7800B3BAF9 /* com.jonasw8.XboxControllerApp.driver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DDD264B82EF8872E00271546 /* SystemExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD264B62EF8872200271546 /* SystemExtensions.framework */; };
+		DDD264BC2EF8878600271546 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD264BB2EF8878600271546 /* ContentView.swift */; };
+		DDD264BF2EF88DA800271546 /* com.jonasw8.XboxControllerApp.driver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = DD6F52DC2EF78D7800B3BAF9 /* com.jonasw8.XboxControllerApp.driver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,7 +21,7 @@
 			remoteGlobalIDString = DDBDE7BB2EF768A300B20291;
 			remoteInfo = xboxcontrollerdriver;
 		};
-		DD6F52DD2EF78DAC00B3BAF9 /* PBXContainerItemProxy */ = {
+		DDD264C12EF8C5C700271546 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD6F52CB2EF78D7800B3BAF9 /* xboxcontrollerdriver.xcodeproj */;
 			proxyType = 1;
@@ -30,14 +31,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DD6F52DF2EF78DE600B3BAF9 /* CopyFiles */ = {
+		DDD264C02EF88DA800271546 /* Embed System Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				DD6F52E02EF78E0E00B3BAF9 /* com.jonasw8.XboxControllerApp.driver.dext in CopyFiles */,
+				DDD264BF2EF88DA800271546 /* com.jonasw8.XboxControllerApp.driver.dext in Embed System Extensions */,
 			);
+			name = "Embed System Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -45,8 +47,9 @@
 /* Begin PBXFileReference section */
 		DD041F222EEE470100AE19C3 /* XboxControllerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XboxControllerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD041F302EEE475E00AE19C3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		DD041F372EEE4B8F00AE19C3 /* ControllerVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerVisualizer.swift; sourceTree = "<group>"; };
 		DD6F52CB2EF78D7800B3BAF9 /* xboxcontrollerdriver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = xboxcontrollerdriver.xcodeproj; path = xboxcontrollerdriver/xboxcontrollerdriver.xcodeproj; sourceTree = "<group>"; };
+		DDD264B62EF8872200271546 /* SystemExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemExtensions.framework; path = System/Library/Frameworks/SystemExtensions.framework; sourceTree = SDKROOT; };
+		DDD264BB2EF8878600271546 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -75,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD264B82EF8872E00271546 /* SystemExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +92,7 @@
 				DD041F362EEE4B5900AE19C3 /* UI */,
 				DD041F302EEE475E00AE19C3 /* Localizable.xcstrings */,
 				DD041F242EEE470100AE19C3 /* XboxControllerApp */,
+				DDD264B52EF8872200271546 /* Frameworks */,
 				DD041F232EEE470100AE19C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,7 +108,7 @@
 		DD041F362EEE4B5900AE19C3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				DD041F372EEE4B8F00AE19C3 /* ControllerVisualizer.swift */,
+				DDD264BB2EF8878600271546 /* ContentView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -116,6 +121,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DDD264B52EF8872200271546 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDD264B62EF8872200271546 /* SystemExtensions.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,12 +139,12 @@
 				DD041F1E2EEE470100AE19C3 /* Sources */,
 				DD041F1F2EEE470100AE19C3 /* Frameworks */,
 				DD041F202EEE470100AE19C3 /* Resources */,
-				DD6F52DF2EF78DE600B3BAF9 /* CopyFiles */,
+				DDD264C02EF88DA800271546 /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DD6F52DE2EF78DAC00B3BAF9 /* PBXTargetDependency */,
+				DDD264C22EF8C5C700271546 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DD041F242EEE470100AE19C3 /* XboxControllerApp */,
@@ -210,17 +223,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD041F382EEE4B8F00AE19C3 /* ControllerVisualizer.swift in Sources */,
+				DDD264BC2EF8878600271546 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DD6F52DE2EF78DAC00B3BAF9 /* PBXTargetDependency */ = {
+		DDD264C22EF8C5C700271546 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = xboxcontrollerdriver;
-			targetProxy = DD6F52DD2EF78DAC00B3BAF9 /* PBXContainerItemProxy */;
+			targetProxy = DDD264C12EF8C5C700271546 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -355,8 +368,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XboxControllerApp/XboxControllerApp.entitlements;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T395SRU2FB;
@@ -366,6 +379,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XboxControllerApp/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_OSBundleUsageDescription = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -373,6 +387,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonasw8.XboxControllerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -389,8 +404,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XboxControllerApp/XboxControllerApp.entitlements;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T395SRU2FB;
@@ -400,6 +415,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XboxControllerApp/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_OSBundleUsageDescription = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -407,6 +423,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonasw8.XboxControllerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
