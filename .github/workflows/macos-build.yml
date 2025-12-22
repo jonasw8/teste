@@ -31,3 +31,15 @@ jobs:
             ONLY_ACTIVE_ARCH=NO \
             DRIVERKIT_DEPLOYMENT_TARGET=23.0 \
             MACOSX_DEPLOYMENT_TARGET=14.0
+
+      - name: Zipar o App
+        run: |
+          cd build/Build/Products/Debug/
+          zip -r XboxControllerApp.zip "XboxControllerApp.app"
+
+      - name: Upload do Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-app-build
+          path: build/Build/Products/Debug/XboxControllerApp.zip
+
