@@ -24,7 +24,7 @@ jobs:
             -project XboxControllerApp.xcodeproj \
             -scheme XboxControllerApp \
             -configuration Debug \
-            -derivedDataPath build
+            -derivedDataPath build \
             -destination 'platform=macOS,arch=x86_64' \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
